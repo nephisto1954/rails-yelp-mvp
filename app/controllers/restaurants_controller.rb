@@ -15,6 +15,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(params[:id])
     @restaurant.save
+    redirect_to restaurants_path
   end
 
   private
